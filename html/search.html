@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="stylesheet" href="../stylesheeds/styles.css">
     <title>Zollernalbkreis</title>
 </head>
 
@@ -112,6 +112,117 @@
     </div>
     <div class="bg-warning w-100" style="height: 1%; color: #F6BF00;"></div>
 
+    <div class="container pt-5 border-start border-end h-100">
+        <h1>Suche</h1>
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Suche</label>
+              <div class="d-flex">
+                <input type="email" class="form-control me-5 w-50" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <button type="submit" class="btn btn-primary" style="background-color:#F6BF00; border-color: #F6BF00; width: 10%;">Suchen</button>
+              </div>
+              <div id="emailHelp" class="form-text">Hier können sie einen neuen Suchbegriff eingeben</div>
+            </div>  
+          </form>
+          <div class="accordion accordion-flush mb-5" id="accordionFlushExample" style="width: 64%;">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed rounded border" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Erweiterte Suche
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body border rounded">
+                    <div class="d-flex mb-3">
+                        <div class="container border me-3">
+                            <h5>Beschränke auf Bereich</h5>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Aktuelles</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Themen</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Landratsamt</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Zollernalbkreis</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Karrier</label>
+                            </div>
+                            <div class="d-flex justify-content-center my-2">
+                                <button type="submit" class="btn btn-primary mx-3" style="background-color:#F6BF00; border-color: #F6BF00;">Auswahl aufheben</button>
+                                <button type="submit" class="btn btn-primary mx-3" style="background-color:#F6BF00; border-color: #F6BF00;">Alles auswählen</button>
+                            </div>
+                        </div>
+                        <div class="container border me-3">
+                            <h5>Dateityp</h5>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">PDF-Datei</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Seiten</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Office-Dokument</label>
+                            </div>
+                            <div class="d-flex justify-content-center mt-5 mb-1">
+                                <button type="submit" class="btn btn-primary mx-3" style="background-color:#F6BF00; border-color: #F6BF00;">Auswahl aufheben</button>
+                                <button type="submit" class="btn btn-primary mx-3" style="background-color:#F6BF00; border-color: #F6BF00;">Alles auswählen</button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Ausschlussbegriffe</h5>
+                    <form>
+                        <div class="mb-3">
+                          <div class="d-flex">
+                            <input type="email" class="form-control me-5 w-50" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <button type="submit" class="btn btn-primary" style="background-color:#F6BF00; border-color: #F6BF00; width: 10%;">Suchen</button>
+                          </div>
+                          <div id="emailHelp" class="form-text">Hier können Begriffe eingeben werden die bei den Suchergebnissen ausgeschlossen werden.</div>
+                        </div>  
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        <h5 class="text-center">Suchergebnissen</h5>
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <span class="page-link text-black">Previous</span>
+              </li>
+              <li class="page-item"><a class="page-link text-black" href="#">1</a></li>
+              <li class="page-item active" aria-current="page">
+                <span class="page-link" style="background-color: #F6BF00;">2</span>
+              </li>
+              <li class="page-item"><a class="page-link text-black" href="#">3</a></li>
+              <li class="page-item"><a class="page-link text-black" href="#">4</a></li>
+              <li class="page-item"><a class="page-link text-black" href="#">5</a></li>
+              <li class="page-item"><a class="page-link text-black" href="#">6</a></li>
+              <li class="page-item"><a class="page-link text-black" href="#">7</a></li>
+              <li class="page-item"><a class="page-link text-black" href="#">8</a></li>
+              <li class="page-item"><a class="page-link text-black" href="#">9</a></li>
+              <li class="page-item"><a class="page-link text-black" href="#">10</a></li>
+              <li class="page-item">
+                <a class="page-link text-black" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+    </div>
+
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
